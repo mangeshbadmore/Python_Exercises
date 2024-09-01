@@ -1,0 +1,108 @@
+You are given a web server log file /root/devops/server.log, where each line has the following format:
+
+request date, time, and time zone
+request line from the client in the format: HTTP request, file name requested, protocol version
+HTTP status code returned to the client
+size (in bytes) of the returned object
+For example: [01/Aug/1995:00:54:59 -0400] "GET /images/opf-logo.gif HTTP/1.0" 200 32511.
+
+Your task is to output the 10 most frequently requested files, with their cumulative bytes tranferred in the format:
+
+file_name bytes_tranfered
+You should only take into account GET requests with a successful status (2xx).
+
+The output should be sorted in descending order of requests' frequency. If there are two files with the same number of requests, you should sort them by file_names in lexicographical order. If there are less than 10 files satisfying all the above conditions, print them all in the correct order.
+
+Example
+
+Consider the following files on your computer:
+
+/root/devops/server.log
+/root/devops/server.log contains the following information:
+
+[01/Aug/1995:00:54:59 -0400] "GET /images/opf-logo.gif HTTP/1.0" 200 32511
+[01/Aug/1995:00:55:04 -0400] "GET /images/ksclogosmall.gif HTTP/1.0" 200 3635
+[01/Aug/1995:00:55:06 -0400] "GET /images/ksclogosmall.gif HTTP/1.0" 403 298
+[01/Aug/1995:00:55:09 -0400] "GET /images/ksclogosmall.gif HTTP/1.0" 200 3635
+[01/Aug/1995:00:55:18 -0400] "GET /images/opf-logo.gif HTTP/1.0" 200 32511
+[01/Aug/1995:00:56:52 -0400] "GET /images/ksclogosmall.gif HTTP/1.0" 200 3635
+The output for this test should be as follows:
+
+/images/ksclogosmall.gif 10905
+/images/opf-logo.gif 65022
+Note that the output should be sorted in descending order not by the amount of transfered bytes, but by the requests' frequency: for /images/ksclogosmall.gif it is 4 and for /images/opf-logo.gif it is 2, thus the first file goes before the second one in the output.
+
+
+
+
+#################################################################################################################################################################################################################################################################################################
+
+Let's define a group of anagrams as a list of words, where for each pair of words w1 and w2, w1 is an anagram of w2.
+
+Your task is to implement a function solution(words) which splits the given words into the smallest possible number of groups of anagrams and returns these groups as the answer.
+
+Note: The groups of anagrams and the anagrams within a single groups can be returned in any order.
+
+Example
+
+For words = ["tea", "eat", "apple", "ate", "vaja", "cut", "java", "utc"], the output can be
+solution(words) = [["tea", "eat", "ate"], ["apple"], ["vaja", "java"], ["cut", "utc"]].
+
+Note: Any other set of 4 groups of anagrams would be also considered correct. Some other correct sets are:
+
+[["tea", "ate", "eat"], ["apple"], ["vaja", "java"], ["utc", "cut"]];
+[["apple"], ["java", "vaja"], ["eat", "tea", "ate"], ["cut", "utc"]];
+[["apple"], ["ate", "eat", "tea"], ["cut", "utc"], ["java", "vaja"]].
+Input/Output
+
+[execution time limit] 4 seconds (py3)
+
+[input] array.string words
+
+A list of words, each containing only lowercase English letters.
+
+Guaranteed constraints:
+1 ≤ words.length ≤ 104,
+1 ≤ words[i].length ≤ 100.
+
+[output] array.array.string
+
+The set that contains the smallest possible number of groups of anagrams. If there are several possible answers, return any of them.
+
+[Python 3] Syntax Tips
+
+# Prints help message to the console
+# Returns a string
+def helloWorld(name):
+    print("This prints to the console when you Run Tests")
+    return "Hello, " + name
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
+
+#################################################################################################################################################################################################################################################################################################
+
